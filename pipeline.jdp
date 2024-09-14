@@ -27,7 +27,7 @@ pipeline {
         }
         stage('Deploy') { 
             steps {
-                deploy adapters: [tomcat9(credentialsId: 'tomyaa', path: '', url: 'https://172.31.42.14:8080/')], contextPath: '/var/lib/jenkins/workspace/new_job/target', war: '**/.*war'
+                deploy adapters: [tomcat9(credentialsId: 'tomyaa', path: '', url: 'https://172.31.42.14:8080/')], contextPath: '/', war: '**/.*war'
             }
         }
     }
